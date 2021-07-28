@@ -1,18 +1,26 @@
 //实现扫雷程序；现在掌握的不是很好，跟老师做的
 #define _CRT_SECURE_NO_WARNINGS 1
 #include <stdio.h>
-
+#include "game.h"
 
 void menu()
 {
 	printf("********************\n");
 	printf("***1.play  0.exit***\n");
-	printf("********************\n");
+	printf("********************\n"); 
 }
 
 void game()
 {
-	
+	//布置好雷的信息
+	char mine[Widths][Lengths] = { 0 };//11*11的棋盘
+	//排查雷的信息
+	char show[Widths][Lengths] = { 0 }; 
+	//初始化函数 
+	InitBoard(mine,Widths ,Lengths,'0');//写出初始化棋盘函数，根据返回类型进行初始化
+	InitBoard(show,Widths ,Lengths,'*');
+	//打印棋盘
+	DisplayBoard(mine,Width,Length);
 }
 
 void test()
