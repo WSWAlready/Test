@@ -20,12 +20,20 @@ void game()
 	InitBoard(mine,Widths ,Lengths,'0');//写出初始化棋盘函数，根据返回类型进行初始化
 	InitBoard(show,Widths ,Lengths,'*');
 	//打印棋盘
-	DisplayBoard(mine,Width,Length);
+	DisplayBoard(show,Width,Length);
+	
+	//布置雷
+	SetMine(mine,Width,Length);
+	//DisplayBoard(mine,Width,Length);
+	//扫雷
+	FindMine(mine,show,Width,Length);
+
 }
 
 void test()
 {
 	int input = 0;//玩家选择项：选择1是再玩一局，0是退出游戏，其他值显示  您输入的有错请在次输入；
+	srand((unsigned int)time(NULL));
 	do
 	{
 		menu();//菜单
