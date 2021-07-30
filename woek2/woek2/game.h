@@ -1,7 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #define Width 9
 #define Length 9
-#define EASY_MINE 10
+#define EASY_MINE 3
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
