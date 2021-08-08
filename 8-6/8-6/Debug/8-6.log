@@ -1,4 +1,4 @@
-﻿生成启动时间为 2021/8/6 19:01:01。
+﻿生成启动时间为 2021/8/7 16:53:24。
      1>项目“E:\Test\8-6\8-6\8-6.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
          D:\Visual  Studio 2012\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:prompt test.c
@@ -10,4 +10,4 @@
 
 生成成功。
 
-已用时间 00:00:00.61
+已用时间 00:00:00.56

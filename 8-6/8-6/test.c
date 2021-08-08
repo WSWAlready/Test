@@ -108,27 +108,51 @@ void Print(int arr[],int sz)
 //	return 0;
 //}
 //计算一个数的二进制中1的数目；
-int  Counter(int i)
-{
-	int count = 0;
-	while(i)
-	{
-		if(i%2 == 1)
-		{
-			
-			count++;
-		}
-		i = i/2;
-	}
-	return count;
-}
-int main()
-{
-	int  i = 0;
-	int count = 0;
-	printf("请输入一个数:");
-	scanf("%d",&i);
-	count = Counter(i);
-	printf("%d\n",count);
-	return 0;
-}
+//int  Counter(unsigned int i)//unsigned主要是防止负数，将负数的补码的符号位擦除
+//{
+//	int count = 0;
+//	while(i)
+//	{
+//		if(i%2 == 1)
+//		{
+//			
+//			count++;
+//		}
+//		i = i/2;
+//	}
+//	return count;
+//}
+//int main()
+//{
+//	int  i = 0;
+//	int count = 0;
+//	printf("请输入一个数:");
+//	scanf("%d",&i);
+//	count = Counter(i);
+//	printf("%d\n",count);
+//	return 0;
+//}
+// 按位与的方法
+//int Counter(int i)
+//{
+//	int n = 0;
+//	int count = 0;
+//	for(n = 0;n < 32;n++)
+//	{
+//		if(((i >> n) & 1) == 1)
+//		{
+//			count++;
+//		}
+//	}
+//	return count;
+//}
+//int main()
+//{
+//	int i = 0;
+//	int count = 0;
+//	printf("请输入一个数：");
+//	scanf("%d",&i);
+//	count = Counter(i);
+//	printf("%d\n",count);
+//	return 0;
+//}
