@@ -1,0 +1,17 @@
+﻿生成启动时间为 2021/9/2 20:05:08。
+     1>项目“E:\Test\9-2\9-2\9-2.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         D:\Visual  Studio 2012\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:prompt test.c
+         test.c
+     1>e:\test\9-2\9-2\test.c(57): error C2143: 语法错误 : 缺少“;”(在“类型”的前面)
+     1>e:\test\9-2\9-2\test.c(59): error C2065: “i”: 未声明的标识符
+     1>e:\test\9-2\9-2\test.c(63): error C2065: “i”: 未声明的标识符
+     1>e:\test\9-2\9-2\test.c(67): error C2065: “i”: 未声明的标识符
+     1>e:\test\9-2\9-2\test.c(73): error C2065: “i”: 未声明的标识符
+     1>e:\test\9-2\9-2\test.c(77): error C2065: “i”: 未声明的标识符
+     1>e:\test\9-2\9-2\test.c(81): error C2065: “i”: 未声明的标识符
+     1>已完成生成项目“E:\Test\9-2\9-2\9-2.vcxproj”(Build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:00.25
