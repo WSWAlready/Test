@@ -8,6 +8,18 @@
 #define MAX_TELE 12
 #define MAX_ADDR 30
 
+
+enum Option
+{
+	EXIT,
+	ADD,
+	DEL,
+	SEARCH,
+	MODIFY,
+	SHOW,
+	SORT,
+
+};
 struct PeoInfo
 {
 	char name[MAX_NAME];   //名字
@@ -26,5 +38,16 @@ struct Contact
 
 //声明初始化函数
 void InitContact(struct Contact* ps);
+//声明添加信息函数
 void ADDContact(struct Contact* ps);
+//声明显示信息函数
 void ShowContact(const struct Contact* ps);
+//声明删除信息函数
+void DelContact(struct Contact* ps);
+//声明查找信息函数
+void SearchContact( struct Contact* ps);
+//声明修改信息函数
+void ModifyContact(struct Contact* ps);
+//声明排序信息函数
+void SortContact(struct Contact* ps);
+
