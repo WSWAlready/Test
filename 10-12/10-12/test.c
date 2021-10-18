@@ -132,25 +132,58 @@
 //	return 0;
 //}
 
-
-char *GetMemory(void)
-{
-	static char p[] = "hello world";//局部变量，出了这个函数，空间就被销毁了。
-	return p;
-}
-
-
-void Test(void)
-{
-	int i = 0;
-	char *str = NULL;
-	str = GetMemory();
-printf(str);	
-}
 //
-int main()
-{
-	Test();
-	return 0;
-}
+//char *GetMemory(void)
+//{
+//	static char p[] = "hello world";//局部变量，出了这个函数，空间就被销毁了。
+//	return p;
+//}
+//
+//
+//void Test(void)
+//{
+//	int i = 0;
+//	char *str = NULL;
+//	str = GetMemory();
+//printf(str);	
+//}
+////
+//int main()
+//{
+//	Test();
+//	return 0;
+//}
+//struct S
+//{
+//	int n ;
+//	int arr[0];//柔性数组，最后一个元素的大小是可以未知大小的，就是柔性数组成员,数组大小可调整
+//};
+//
+//int main()
+//{
+//	//struct S s;
+//	//printf("%d\n",sizeof(s));  //计算结构体大小时，不包含柔性数组的大小
+//	struct S* ps = (struct S*)malloc(sizeof(struct S) + 5 * sizeof(int));  
+//	ps->n = 100;
+//	int i = 0;
+//	for(i = 0;i<5;i++ )
+//	{
+//		ps->arr[i] = i;
+//	}
+//	struct S* pr = (struct S*)realloc(ps,44);
+//	if(pr != NULL)
+//	{
+//		ps = pr;
+//	}
+//	for(i = 5;i<10;i++ )
+//	{
+//		ps->arr[i] = i;
+//	}
+//
+//	free(ps);
+//	ps = NULL;
+//
+//	return 0;
+//}
+
 
