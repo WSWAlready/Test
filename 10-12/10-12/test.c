@@ -187,3 +187,44 @@
 //}
 
 
+//文件操作
+//程序文件：.c  .obj  .exe
+//数据文件
+
+//int main()
+//{
+//	//打开文件test.txt
+//	//相对路径
+//	//..表示上一级路径
+//	//.表示当前路径
+//	//fopen("../../test.txt")
+//	//fopen("test.txt","r")    //只读
+//
+//	FILE* pf = fopen("test.txt","r");
+//	if(pf == NULL)
+//	{
+//		printf("%s\n",strerror(errno));
+//	}
+//	//打开成功
+//	//关闭文件
+//	fclose(pf);
+//	pf = NULL;
+//	return 0;
+//}
+int main()
+{
+
+	FILE* pf1 = fopen("test.txt","w");
+	if(pf1 == NULL)
+	{
+		printf("%s\n",strerror(errno));
+		return 0;
+	}
+	fputc('b',pf1);
+	fputc('c',pf1);
+	fputc('d',pf1);
+
+	fclose(pf1);
+	pf1 = NULL;
+	return 0;
+}
