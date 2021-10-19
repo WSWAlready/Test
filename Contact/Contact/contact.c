@@ -6,19 +6,45 @@
 
 void InitContact(struct Contact* ps)
 {
-	memset(ps->data,0,sizeof(ps->data));
-	ps->size = 0; //设置通讯录最初只有0个元素
+	ps->data  = (struct PeoInfo*)malloc(DEFUALT_SZ * sizeof(struct PeoInfo));
+	if(ps->data == NULL)
+	{
+		return;
+	}
+	ps->size = 0;
+	ps->capacity = DEFUALT_SZ;
+}
+void Check_Capacity(struct Contact* ps)
+{
+	if(ps->size == ps->capacity)
+	{
+		struct PeoInfo* pr = (struct PeoInfo*)realloc(ps->data,(ps->capacity + 2) * sizeof(struct PeoInfo));
+		if(pr!=NULL)
+		{
+			ps->data = pr;
+			ps->capacity += 2;
+			printf("增容成功\n");
+		}
+		else
+		{
+			printf("增容失败\n");
+		}
+	}
 }
 
 void ADDContact(struct Contact* ps)
 {
-	if(ps->size == MAX)
-	{
-		printf("通讯录已满，无法增加\n");
+	//检测当前通讯录的情况
+	//满了就增容
+	//不满就增加数据
+	Check_Capacity(ps);
+	//if(ps->size == MAX)
+	//{
+	//	printf("通讯录已满，无法增加\n");
 
-	}
-	else
-	{
+	//}
+	//else
+	//{
 		printf("请输入名字:>");
 		scanf("%s",ps->data[ps->size].name);  //ps->data是找到数组[]是下标
 		printf("请输入年龄:>");
@@ -34,7 +60,7 @@ void ADDContact(struct Contact* ps)
 		printf("添加成功\n");
 		printf("目前已经有 %d 个人的信息\n",ps->size);
 
-	}
+	//}
 }
 
 void ShowContact(const struct Contact* ps)
@@ -161,4 +187,9 @@ void SortContact(struct Contact* ps)
 {
 	qsort(ps->data,ps->size,sizeof(struct PeoInfo),cmp_struct);
 
+}
+void DestroyContact(struct Contact* ps)
+{
+	free(ps->data);
+	ps->data = NULL;
 }

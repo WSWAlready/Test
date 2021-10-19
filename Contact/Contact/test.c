@@ -22,7 +22,7 @@ int main()
 	int input = 0;
 	//创建通讯录
 	int size = 0;     //记录已经录入的成员数
-	struct Contact con;  //con 就是通讯录，里面包含成员信息和数量
+	struct Contact con;  //con 就是通讯录，里面包含：data指针和size和capacity
 	//初始化通信录
 	InitContact(&con);  
 	do
@@ -51,9 +51,9 @@ int main()
 		case SORT:
 			SortContact(&con);
 			ShowContact(&con);
-
 			break;
 		case EXIT:
+			DestroyContact(&con);
 			printf("退出通讯录\n");
 		default:
 			printf("选择错误：)\n");
