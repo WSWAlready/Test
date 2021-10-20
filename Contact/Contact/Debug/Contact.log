@@ -1,17 +1,11 @@
-﻿生成启动时间为 2021/10/19 12:51:32。
+﻿生成启动时间为 2021/10/20 18:50:38。
      1>项目“D:\Git项目\Test\Contact\Contact\Contact.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
-         E:\WanyxGames\visual studio\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:prompt contact.c test.c
-         test.c
+         E:\WanyxGames\visual studio\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:prompt contact.c
          contact.c
-         正在生成代码...
-       Link:
-         E:\WanyxGames\visual studio\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Git项目\Test\Contact\Debug\Contact.exe" /INCREMENTAL:NO /NOLOGO /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Git项目\Test\Contact\Debug\Contact.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Git项目\Test\Contact\Debug\Contact.lib" /MACHINE:X86 Debug\contact.obj
-         Debug\test.obj
-     1>contact.obj : warning LNK4075: 忽略“/EDITANDCONTINUE”(由于“/OPT:LBR”规范)
-         Contact.vcxproj -> D:\Git项目\Test\Contact\Debug\Contact.exe
-     1>已完成生成项目“D:\Git项目\Test\Contact\Contact\Contact.vcxproj”(Build 个目标)的操作。
+     1>d:\git项目\test\contact\contact\contact.c : fatal error C1033: 无法打开程序数据库“d:\git项目\test\contact\contact\debug\vc110.idb”
+     1>已完成生成项目“D:\Git项目\Test\Contact\Contact\Contact.vcxproj”(Build 个目标)的操作 - 失败。
 
-生成成功。
+生成失败。
 
-已用时间 00:00:00.61
+已用时间 00:00:00.10

@@ -21,6 +21,7 @@ enum Option
 	MODIFY,
 	SHOW,
 	SORT,
+	SAVE,
 
 };
 struct PeoInfo
@@ -56,5 +57,8 @@ void ModifyContact(struct Contact* ps);
 void SortContact(struct Contact* ps);
 //声明释放空间函数
 void DestroyContact(struct Contact* ps);
-
+//声明保存信息函数
+void SaveContact(struct Contact* ps);
+//声明加载信息函数
+void LoadContact(struct Contact* ps);
 

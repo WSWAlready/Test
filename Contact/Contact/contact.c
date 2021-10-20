@@ -2,6 +2,10 @@
 #include<stdio.h>
 #include"contact.h"
 #include<stdlib.h>
+#include<string.h>
+
+#include<errno.h>
+
 
 
 void InitContact(struct Contact* ps)
@@ -13,7 +17,30 @@ void InitContact(struct Contact* ps)
 	}
 	ps->size = 0;
 	ps->capacity = DEFUALT_SZ;
+
+	//加载文件信息
+	LoadContact(ps);
 }
+void Check_Capacity(struct Contact* ps);
+void LoadContact(struct Contact* ps)
+{
+	struct PeoInfo tmp = { 0 };
+	FILE* PfRead = fopen("contact.dat","rb");
+	if(PfRead == NULL)
+	{
+		printf("LoadContact::%s\n",strerror(errno));
+		return;
+	}
+	while(fread(&tmp,sizeof(struct PeoInfo),10,PfRead))
+	{
+		Check_Capacity(ps);
+		ps->data[ps->size] = tmp;
+		ps->size++;
+	}
+	fclose(PfRead);
+	PfRead = NULL;
+}
+
 void Check_Capacity(struct Contact* ps)
 {
 	if(ps->size == ps->capacity)
@@ -192,4 +219,22 @@ void DestroyContact(struct Contact* ps)
 {
 	free(ps->data);
 	ps->data = NULL;
+}
+void SaveContact(struct Contact* ps)
+{
+	int i = 0;
+	FILE* PfWrite = fopen("contact.dat","wb");
+	if(PfWrite == NULL)
+	{
+		printf("%s\n",strerror(errno));
+		return ;
+	}
+	
+	for(i = 0;i < ps->size;i++)
+	{
+		fwrite(&(ps->data[i]),sizeof(struct PeoInfo),1,PfWrite);
+	}
+
+	fclose(PfWrite);
+	PfWrite = NULL;
 }

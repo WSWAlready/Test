@@ -211,20 +211,43 @@
 //	pf = NULL;
 //	return 0;
 //}
-int main()
-{
+//int main()
+//{
+//
+//	FILE* pf1 = fopen("test.txt","w");
+//	if(pf1 == NULL)
+//	{
+//		printf("%s\n",strerror(errno));
+//		return 0;
+//	}
+//	fputc('b',pf1);
+//	fputc('c',pf1);
+//	fputc('d',pf1);
+//
+//	fclose(pf1);
+//	pf1 = NULL;
+//	return 0;
+//}
 
-	FILE* pf1 = fopen("test.txt","w");
-	if(pf1 == NULL)
-	{
-		printf("%s\n",strerror(errno));
-		return 0;
-	}
-	fputc('b',pf1);
-	fputc('c',pf1);
-	fputc('d',pf1);
 
-	fclose(pf1);
-	pf1 = NULL;
-	return 0;
-}
+//int  main()
+//{
+//	char buff[1024] = { 0 };
+//
+//	FILE* ps = fopen("test.txt","r");
+//	if(ps == NULL)
+//	{
+//		return 0;
+//	}
+//	fgets(buff,1024,ps);
+//	printf("%s",buff);//本来就具有换行
+//	//puts(buff);//puts自带换行
+//	/*fputs("hello\n",ps);
+//	fputs("world\n",ps);*/
+//
+//
+//	fclose(ps);
+//	ps = NULL;
+//}
+
+
