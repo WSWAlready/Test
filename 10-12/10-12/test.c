@@ -251,3 +251,25 @@
 //}
 
 
+//int main()
+//{
+//	FILE* pf = fopen("test.txt","r");
+//	if(pf == NULL)
+//	{
+//		return 0;
+//	}
+//	int pos = ftell(pf);
+//	printf("%d\n",pos);
+//	fclose(pf);
+//	pf = NULL;
+//	return 0;
+//}
+
+
+
+
+
+
+
+
+
