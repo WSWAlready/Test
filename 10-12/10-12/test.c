@@ -266,10 +266,27 @@
 //}
 
 
+//int main()
+//{
+//	int a = 10;
+//	int b = a + 1;//a没改变
+//	int b = ++a;//a改变了
+//	return 0;
+//}
 
 
 
 
+#define Max(X,Y) ((X>Y)?(X):(Y))
+
+int main()
+{
+	int a = 10;
+	int b = a + 1;
+	int max = Max(a,b);
+	printf("%d\n",max);
+	return 0;
+}
 
 
 
